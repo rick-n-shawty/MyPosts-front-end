@@ -1,0 +1,43 @@
+.card{
+    height: 350px;
+    width: 200px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #333333;
+
+}
+.card .top img{
+    object-fit: contain;
+    height: 100%;
+}
+.card .top{
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+.card .bottom{
+    display: flex;
+    align-items: center;
+    height: 20%;
+    gap: 1rem;
+}
+.card .bottom button{
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #E1E1E1;
+
+}
+.card .bottom p{
+    font-size: 1.1rem;
+    word-wrap: break-word;
+}
