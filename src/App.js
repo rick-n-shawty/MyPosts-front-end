@@ -9,7 +9,7 @@ import Register from './components /Register';
 export const UserContext = createContext([])
 function App() {
   const [user, setUser] = useState({})
-  axios.defaults.baseURL = 'https://mypostsapi.onrender.com/api/v1'
+  axios.defaults.baseURL = 'http://localhost:8080/api/v1'
   return (
     <UserContext.Provider value={[user, setUser]}>
     <HashRouter>

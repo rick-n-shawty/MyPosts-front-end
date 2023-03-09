@@ -14,11 +14,11 @@ export default function Post({url, caption, id}){
             console.log(res)
             setPosts(prev => {
                 const newArr = prev.map(item => {
-                    if(item.props === undefined) return []
                     console.log(item)
-                    if(item.props.id !== id) return item
+                    if(item.props.id !== id || !item.props || !item) return item
                 })
-                return newArr
+
+                return newArr.filter(item => item)
             })
         }catch(err){
             console.log(err)
