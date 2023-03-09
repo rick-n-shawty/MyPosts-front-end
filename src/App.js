@@ -2,17 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import {useState, createContext} from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
 import Home from './components /Home';
 import Login from './components /Login';
 import Register from './components /Register';
 export const UserContext = createContext([])
 function App() {
   const [user, setUser] = useState({})
-  axios.defaults.baseURL = 'http://localhost:8080/api/v1'
+  axios.defaults.baseURL = 'https://mypostsapi.onrender.com/api/v1'
   return (
     <UserContext.Provider value={[user, setUser]}>
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route path='/' index element={<Home/>}/>
@@ -20,7 +20,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
     </UserContext.Provider>
   );
 }
